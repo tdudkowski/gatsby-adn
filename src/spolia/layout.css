@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+div.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: no-repeat url("../images/gong1.png") bottom right;
+}
+
+nav a {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+header,
+footer {
+  background-color: rgba(200, 200, 200, 0.7);
+  z-index: 100;
+}
+
+main {
+  flex: 1;
+  background-color: rgba(251, 251, 251, 0.5);
+}
+
+@media (min-width: 800px) {
+  nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    flex: 1;
+  }
+}
