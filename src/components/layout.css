@@ -47,9 +47,12 @@ nav a:hover {
 main {
   flex: 1;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 section {
+  height: 100%;
   min-height: 100vh;
   scroll-margin-top: var(--header-height);
 }
@@ -198,6 +201,8 @@ nav::after {
 #gongi {
   background: right bottom url("../images/gong3.png") no-repeat #ead8ba;
   position: relative;
+  font-size: 1rem;
+  display: flex;
   /* overflow: hidden; */
 }
 
@@ -211,26 +216,35 @@ nav::after {
   font-weight: bold;
 }
 
+#gongi h2 {
+  font-size: 10rem;
+}
+
+#gongi p {
+  font-size: 1rem;
+}
+
 #gongi > article.gongi {
   width: 30rem;
-  /* color: #665; */
   margin: 1rem;
-  top: 10rem;
-  left: 4rem;
 }
 
 article.gongi h2 {
-  position: relative;
-  font-size: 10rem;
-  /* color: #997; */
-  left: 4rem;
-  top: 1rem;
+  margin-left: 4rem;
+  margin-bottom: 2rem;
 }
 
-article.gongi p.effect {
-  position: relative;
-  font-size: 1rem;
-  top: 10rem;
+article.gongi > section.gongi-txt {
+  margin-top: 4rem;
+}
+
+#gongi .video {
+  margin: 14rem 0 0 8rem;
+  z-index: 1;
+}
+
+#gongi .video iframe {
+  width: 400px;
 }
 
 /* SECTION TWO */
@@ -282,10 +296,18 @@ article.usluga picture .gatsby-image-wrapper {
 
 article.omnie {
   flex: 1;
+  overflow: hidden;
+}
+
+article.omnie .omnie-txt {
+  /* top: 2rem; */
+
+  padding-top: 2rem;
 }
 
 article.omnie p.effect {
-  margin: 2rem;
+  margin: 1rem 2rem;
+  /* margin-top: 0; */
 }
 
 article.omnie picture .gatsby-image-wrapper {
@@ -296,7 +318,7 @@ article.omnie picture .gatsby-image-wrapper {
 /* SECTION FOUR */
 
 #kontakt {
-  background: left top url("../images/gong2.png") no-repeat;
+  background: left top url("../images/gong2.png") no-repeat #fcf0cc;
   display: flex;
 }
 

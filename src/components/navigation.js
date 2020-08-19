@@ -40,8 +40,8 @@ const Navigation = () => {
   return (
     <nav>
       <ul>
-        {elementsMenuArray.map((el) => (
-          <li>
+        {elementsMenuArray.map((el, i) => (
+          <li key={i}>
             <a
               href={"#" + el[0]}
               data-jump={el[0]}

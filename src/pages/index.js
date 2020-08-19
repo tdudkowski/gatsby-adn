@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Layout from "../components/layout";
+import Video from "../components/video";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import { gsap } from "gsap";
@@ -8,21 +9,20 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 // src https://www.youtube.com/watch?v=z4UWgHvUHY8
 
-const themeAnimation = (dataAnimation, el) => {
+const themeAnimation = (dataAnimation, el, pfirst, omnietxt) => {
   switch (dataAnimation) {
     case "1":
-      // console.log("ELO1");
       gsap.fromTo(
-        el,
-        { x: "+=10", opacity: 0 },
-        { x: 0, opacity: 1, duration: 2 }
+        pfirst,
+        { y: "+=35", opacity: 0.2 },
+        { y: 0, opacity: 0.9, duration: 2 }
       );
       break;
     case "2":
       // console.log("ELO2");
       gsap.fromTo(
         el,
-        { x: "+=1", opacity: 0 },
+        { x: "+=1", opacity: 0.4 },
         {
           x: 0,
           opacity: 1,
@@ -36,7 +36,20 @@ const themeAnimation = (dataAnimation, el) => {
       );
       break;
     case "3":
-      console.log("ELO3");
+      // console.log("ELO3");
+      gsap.fromTo(
+        omnietxt,
+        { x: "-=200", opacity: 0.1 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 3,
+          scrollTrigger: {
+            trigger: el,
+            start: "top bottom",
+          },
+        }
+      );
       break;
     case "4":
       console.log("ELO4");
@@ -49,10 +62,12 @@ const themeAnimation = (dataAnimation, el) => {
 const LandingPage = ({ data }) => {
   useEffect(() => {
     const els = document.querySelectorAll(".section");
+    const pfirst = document.getElementsByClassName("gongi-txt");
+    const omnietxt = document.getElementsByClassName("omnie-txt");
 
     els.forEach((el) => {
       let dataAnimation = el.dataset.animation;
-      themeAnimation(dataAnimation, el);
+      themeAnimation(dataAnimation, el, pfirst, omnietxt);
     });
   }, []);
 
@@ -60,26 +75,33 @@ const LandingPage = ({ data }) => {
     <Layout>
       <section id="gongi" className="section" data-animation="1">
         <article className="gongi">
-          <h2>Gongi</h2>
-          <p className="effect">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-            asperiores! Nobis cum ratione harum velit quibusdam maiores
-            molestias explicabo. Fuga hic illo consequuntur libero laborum eos
-            nobis ducimus voluptatibus ab.
-          </p>
-          <p className="effect">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-            asperiores! Nobis cum ratione harum velit quibusdam maiores
-            molestias explicabo. Fuga hic illo consequuntur libero laborum eos
-            nobis ducimus voluptatibus ab.
-          </p>
-          <p className="effect">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-            asperiores! Nobis cum ratione harum velit quibusdam maiores
-            molestias explicabo. Fuga hic illo consequuntur libero laborum eos
-            nobis ducimus voluptatibus ab.
-          </p>
+          <section className="gongi-txt">
+            <h2>Gongi</h2>
+            <p className="effect">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+              asperiores! Nobis cum ratione harum velit quibusdam maiores
+              molestias explicabo. Fuga hic illo consequuntur libero laborum eos
+              nobis ducimus voluptatibus ab.
+            </p>
+            <p className="effect">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+              asperiores! Nobis cum ratione harum velit quibusdam maiores
+              molestias explicabo. Fuga hic illo consequuntur libero laborum eos
+              nobis ducimus voluptatibus ab.
+            </p>
+            <p className="effect">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+              asperiores! Nobis cum ratione harum velit quibusdam maiores
+              molestias explicabo. Fuga hic illo consequuntur libero laborum eos
+              nobis ducimus voluptatibus ab.
+            </p>
+          </section>
         </article>
+        <Video
+          className="video"
+          videoSrcURL="https://www.youtube.com/embed/OW7TH2U4hps"
+          videoTitle="9 HOURS Tibetan Healing Sounds - Singing Bowls - Natural sounds Gold for Meditation & Relaxation"
+        />
       </section>
       <section id="usluga" className="section" data-animation="2">
         <article className="usluga">
@@ -91,8 +113,8 @@ const LandingPage = ({ data }) => {
             max-height="100%"
             style={{ border: "none", overflow: "hidden" }}
             scrolling="no"
-            frameborder="0"
-            allowTransparency="true"
+            frameBorder="0"
+            allowtransparency="true"
             allow="encrypted-media"
             title="facebook"
           ></iframe>
@@ -124,37 +146,39 @@ const LandingPage = ({ data }) => {
       </section>
       <section id="omnie" className="section" data-animation="3">
         <article className="omnie">
-          <p className="effect">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-            asperiores! Nobis cum ratione harum velit quibusdam maiores
-            molestias explicabo. Fuga hic illo consequuntur libero laborum eos
-            nobis ducimus voluptatibus ab.
-          </p>
-          <p className="effect">
-            awesome headline, amazing picture, komunikat 3 sec czy ta strona
-            jest dla mnie co robisz i dlaczego jestes wyjatkowy, dlczego to
-            robisz clear value prop logical flow: explanation, benefits
-            testimonial, cta identify the pain and sth on pleasure multiple
-            forms of contact guarente, powerful cta orange
-          </p>
-          <p className="effect">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-            asperiores! Nobis cum ratione harum velit quibusdam maiores
-            molestias explicabo. Fuga hic illo consequuntur libero laborum eos
-            nobis ducimus voluptatibus ab.
-          </p>
-          <p className="effect">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-            asperiores! Nobis cum ratione harum velit quibusdam maiores
-            molestias explicabo. Fuga hic illo consequuntur libero laborum eos
-            nobis ducimus voluptatibus ab.
-          </p>
-          <p className="effect">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-            asperiores! Nobis cum ratione harum velit quibusdam maiores
-            molestias explicabo. Fuga hic illo consequuntur libero laborum eos
-            nobis ducimus voluptatibus ab.
-          </p>
+          <section className="omnie-txt">
+            <p className="effect">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+              asperiores! Nobis cum ratione harum velit quibusdam maiores
+              molestias explicabo. Fuga hic illo consequuntur libero laborum eos
+              nobis ducimus voluptatibus ab.
+            </p>
+            <p className="effect">
+              awesome headline, amazing picture, komunikat 3 sec czy ta strona
+              jest dla mnie co robisz i dlaczego jestes wyjatkowy, dlczego to
+              robisz clear value prop logical flow: explanation, benefits
+              testimonial, cta identify the pain and sth on pleasure multiple
+              forms of contact guarente, powerful cta orange
+            </p>
+            <p className="effect">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+              asperiores! Nobis cum ratione harum velit quibusdam maiores
+              molestias explicabo. Fuga hic illo consequuntur libero laborum eos
+              nobis ducimus voluptatibus ab.
+            </p>
+            <p className="effect">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+              asperiores! Nobis cum ratione harum velit quibusdam maiores
+              molestias explicabo. Fuga hic illo consequuntur libero laborum eos
+              nobis ducimus voluptatibus ab.
+            </p>
+            <p className="effect">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+              asperiores! Nobis cum ratione harum velit quibusdam maiores
+              molestias explicabo. Fuga hic illo consequuntur libero laborum eos
+              nobis ducimus voluptatibus ab.
+            </p>
+          </section>
         </article>
         <article className="omnie">
           <h2>O mnie</h2>
@@ -174,18 +198,18 @@ const LandingPage = ({ data }) => {
         <article className="kontakt">
           <h2>Kontakt</h2>
           <form action="" className="form">
-            <label for="name" aria-label="name">
+            <label htmlFor="name" aria-label="name">
               Nadawca: <br />
               <input type="text" id="name" name="name"></input>
               <br />
             </label>
 
-            <label for="email">
+            <label htmlFor="email">
               Email: <br />
               <input type="email" id="email" name="email"></input>
               <br />
             </label>
-            <label for="message">
+            <label htmlFor="message">
               Wiadomość: <br />
               <textarea name="message" rows="10" cols="30"></textarea>
               <br />
