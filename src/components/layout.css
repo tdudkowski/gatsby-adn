@@ -1,5 +1,5 @@
 :root {
-  --header-height: 3rem;
+  --header-height: 4rem;
 }
 
 body {
@@ -12,6 +12,13 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+nav a {
+  font-size: 2rem;
+  line-height: 4rem;
+  border-radius: 10px;
+  margin: 5px;
 }
 
 h2 {
@@ -77,8 +84,8 @@ nav a {
   font-size: 1.3rem;
   user-select: none;
   line-height: var(--header-height);
-  color: #bdf;
-  text-shadow: 2px 2px 2px rgba(130, 30, 200, 0.8);
+  /* color: #bdf; */
+  /* text-shadow: 2px 2px 2px rgba(130, 30, 200, 0.8); */
 }
 
 /* COLORS */
@@ -86,27 +93,39 @@ nav a {
 header,
 footer {
   /* background-color: rgba(200, 200, 200, 0.7); */
-  background-color: #6cbcf9;
+  /* background-color: #6cbcf9; */
+  background-color: #691145;
+}
+
+header a,
+footer a {
+  color: #fff;
+}
+
+h2 {
+  color: rgba(51, 51, 51, 0.7);
 }
 
 main {
-  background-color: rgba(251, 251, 51, 0.1);
+  /* background-color: rgba(251, 251, 51, 0.1); */
 }
 
 section:nth-child(even) {
-  background-color: rgba(200, 200, 200, 0.4);
+  /* background-color: rgba(200, 200, 200, 0.4); */
+  background-color: #fcf0cc;
 }
 
 section:nth-child(odd) {
   /* background-color: rgba(251, 251, 251, 0.2); */
-  background: linear-gradient(#fff, #abcbe4);
+  /* background: linear-gradient(#fff, #abcbe4); */
+  background-color: #ead8ba;
 }
 
 .active {
-  /* background-color: rgba(51, 51, 51, 0.5); */
+  background-color: rgba(251, 251, 251, 0.3);
   /* color: rgba(255, 255, 240, 0.9); */
-  background-color: #43a7fc;
-  color: #def;
+  /* background-color: #43a7fc; */
+  /* color: #def; */
   transition: 1s;
   pointer-events: none;
 }
@@ -117,15 +136,16 @@ a:active {
 
 nav {
   position: relative;
-  border-bottom: 1px solid #00f;
+  /* border-bottom: 1px solid #00f; */
 }
+
 nav::after {
   content: "";
   position: absolute;
   top: 100%;
   width: 100%;
-  height: 4px;
-  background: linear-gradient(#6cbcf9, transparent);
+  height: 8px;
+  background: linear-gradient(#614, transparent);
 }
 
 /* FORM */
@@ -148,7 +168,7 @@ nav::after {
   padding: 0.2rem;
   border: 1px solid rgba(51, 51, 51, 0.3);
   border-radius: 2px;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .form input:hover,
@@ -158,7 +178,7 @@ nav::after {
 
 .form input:focus,
 .form textarea:focus {
-  box-shadow: 0 0 3px red;
+  box-shadow: 0 0 3px #691145;
 }
 
 .form .btn {
@@ -176,7 +196,7 @@ nav::after {
 /* SECTION ONE */
 
 #gongi {
-  background: right bottom url("../images/gong3.png") no-repeat;
+  background: right bottom url("../images/gong3.png") no-repeat #ead8ba;
   position: relative;
   /* overflow: hidden; */
 }
@@ -193,7 +213,7 @@ nav::after {
 
 #gongi > article.gongi {
   width: 30rem;
-  color: #665;
+  /* color: #665; */
   margin: 1rem;
   top: 10rem;
   left: 4rem;
@@ -202,7 +222,7 @@ nav::after {
 article.gongi h2 {
   position: relative;
   font-size: 10rem;
-  color: #997;
+  /* color: #997; */
   left: 4rem;
   top: 1rem;
 }
@@ -257,7 +277,7 @@ article.usluga picture .gatsby-image-wrapper {
   font-size: 6rem;
   margin: 0.5rem 1rem;
   text-align: right;
-  color: #663;
+  /* color: #663; */
 }
 
 article.omnie {
@@ -284,7 +304,7 @@ article.omnie picture .gatsby-image-wrapper {
   font-size: 6rem;
   margin: 2rem;
   text-align: right;
-  color: #663;
+  /* color: #663; */
 }
 
 article.kontakt {

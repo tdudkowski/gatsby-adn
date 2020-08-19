@@ -16,7 +16,7 @@ const smoothJump = (e) => {
 
   gsap.to(window, {
     duration: 2,
-    scrollTo: { y: thisSectionClicked, offsetY: 48 },
+    scrollTo: { y: thisSectionClicked, offsetY: 64 },
     ease: "power3",
   });
 };
