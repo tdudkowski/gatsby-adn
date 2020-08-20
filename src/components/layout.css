@@ -2,6 +2,11 @@
   --header-height-small: 2rem;
   --header-height-big: 4rem;
 }
+* {
+  /* border: 1px solid red; */
+
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -32,6 +37,7 @@ nav a:hover {
 h2 {
   margin-top: 0;
   padding-top: 0;
+  /* overflow: hidden; */
 }
 
 div.container {
@@ -46,6 +52,9 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
+  /* max-width: 100%;
+  overflow: hidden; */
+  box-sizing: border-box;
 }
 
 main {
@@ -59,7 +68,7 @@ section {
   scroll-margin-top: var(--header-height-small);
   display: flex;
   flex-direction: column;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 section > article {
@@ -82,7 +91,7 @@ section > article {
 }
 
 #gongi .video {
-  margin: 0 auto;
+  margin: 1rem auto;
   z-index: 1;
 }
 
@@ -256,7 +265,12 @@ article.kontakt ul li {
   }
 
   #gongi .video {
-    margin: 3rem;
+    margin: 3rem auto;
+    max-width: 90%;
+  }
+
+  #gongi .video iframe {
+    max-width: 90%;
   }
 
   /* SECTION TWO big */
@@ -287,6 +301,7 @@ article.kontakt ul li {
 
   #omnie {
     flex-direction: row;
+    overflow: hidden;
   }
 
   #omnie h2 {
@@ -297,6 +312,7 @@ article.kontakt ul li {
 
   #kontakt {
     flex-direction: row;
+    overflow: hidden;
   }
 
   #kontakt h2 {
@@ -311,7 +327,8 @@ article.kontakt ul li {
   }
 
   article.kontakt ul {
-    margin: 11rem 1rem 0 5rem;
+    margin: 11rem 0 0 0;
+    padding: 0.5rem;
   }
 
   article.kontakt ul li {
@@ -321,12 +338,12 @@ article.kontakt ul li {
   /* FORM big */
 
   .form {
-    margin: 2rem;
-    padding: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
   }
 
   .form .btn {
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
 }
 
@@ -338,6 +355,19 @@ article.kontakt ul li {
 
   #gongi .video iframe {
     width: 400px;
+  }
+
+  .form {
+    margin: 2rem;
+    padding: 1rem;
+  }
+
+  .form .btn {
+    margin-right: 2rem;
+  }
+
+  article.kontakt ul {
+    margin: 11rem 1rem 0 5rem;
   }
 }
 

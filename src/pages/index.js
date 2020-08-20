@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const themeAnimation = (dataAnimation, el, pfirst, omnietxt) => {
   switch (dataAnimation) {
     case "1":
+      console.log("ELO1");
       gsap.fromTo(
         pfirst,
         { y: "+=35", opacity: 0.2 },
@@ -19,7 +20,7 @@ const themeAnimation = (dataAnimation, el, pfirst, omnietxt) => {
       );
       break;
     case "2":
-      // console.log("ELO2");
+      console.log("ELO2");
       gsap.fromTo(
         el,
         { x: "+=1", opacity: 0.4 },
@@ -107,7 +108,7 @@ const LandingPage = ({ data }) => {
         <article className="usluga">
           <iframe
             src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FD%C5%BAwi%C4%99koterapia-relaksacje-z-u%C5%BCyciem-gong%C3%B3w-i-mis-tybeta%C5%84skich-420657995360697%2F&tabs=timeline&width=800&height=700&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-            // width="600"
+            width="600"
             height="700"
             max-width="90%"
             max-height="100%"
