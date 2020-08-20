@@ -6,6 +6,8 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const smoothJump = (e) => {
   const thisSectionClicked = document.getElementById(e.target.dataset.jump);
   const links = document.querySelectorAll("nav a");
+  const nav = document.querySelector("nav").offsetHeight;
+  console.log(nav, thisSectionClicked);
   links.forEach(function (link) {
     if (link.dataset.jump === e.target.dataset.jump) {
       link.classList.add("active");
@@ -16,7 +18,7 @@ const smoothJump = (e) => {
 
   gsap.to(window, {
     duration: 2,
-    scrollTo: { y: thisSectionClicked, offsetY: 64 },
+    scrollTo: { y: thisSectionClicked, offsetY: nav },
     ease: "power3",
   });
 };

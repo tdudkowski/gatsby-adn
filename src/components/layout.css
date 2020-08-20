@@ -1,5 +1,6 @@
 :root {
-  --header-height: 4rem;
+  --header-height-small: 2rem;
+  --header-height-big: 4rem;
 }
 
 body {
@@ -15,10 +16,17 @@ ul {
 }
 
 nav a {
-  font-size: 2rem;
-  line-height: 4rem;
+  font-size: 1.1rem;
   border-radius: 10px;
   margin: 5px;
+  line-height: var(--header-height-small);
+  text-align: left;
+  padding-left: 3rem;
+  display: block;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 h2 {
@@ -40,10 +48,6 @@ header {
   z-index: 10;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
 main {
   flex: 1;
   overflow: hidden;
@@ -52,106 +56,115 @@ main {
 }
 
 section {
-  height: 100%;
-  min-height: 100vh;
-  scroll-margin-top: var(--header-height);
+  scroll-margin-top: var(--header-height-small);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-@media (min-width: 800px) {
-  nav ul {
-    display: flex;
-  }
-
-  nav ul li {
-    flex: 1;
-  }
-
-  .gongi h2 {
-    font-size: 20rem;
-    margin: -3rem;
-    overflow: hidden;
-  }
-
-  .gongi .effect {
-    font-size: 3rem;
-  }
+section > article {
+  margin: 1rem;
 }
 
-/* PRESENTATION */
+/* SECTION ONE standard */
 
-nav a {
-  margin: 0;
-  text-align: center;
+#gongi {
+  background: right bottom url("../images/gong3.png") no-repeat #ead8ba;
+}
+
+#gongi h2 {
+  font-size: 4rem;
+}
+
+#gongi > article.gongi {
+  max-width: 30rem;
+  background-color: transparent;
+}
+
+#gongi .video {
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* SECTION TWO standard */
+
+#usluga {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+article.usluga h2 {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+article.usluga picture {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #bb9;
   display: block;
-  text-decoration: none;
-  font-size: 1.3rem;
-  user-select: none;
-  line-height: var(--header-height);
-  /* color: #bdf; */
-  /* text-shadow: 2px 2px 2px rgba(130, 30, 200, 0.8); */
 }
 
-/* COLORS */
-
-header,
-footer {
-  /* background-color: rgba(200, 200, 200, 0.7); */
-  /* background-color: #6cbcf9; */
-  background-color: #691145;
+article.usluga picture .gatsby-image-wrapper {
+  box-shadow: 3px 3px 2px #996;
 }
 
-header a,
-footer a {
-  color: #fff;
+/* SECTION THREE standard */
+
+#omnie {
+  flex-direction: column-reverse;
 }
 
-h2 {
-  color: rgba(51, 51, 51, 0.7);
+#omnie h2 {
+  font-size: 3rem;
 }
 
-main {
-  /* background-color: rgba(251, 251, 51, 0.1); */
+article.omnie {
+  flex: 1;
+  overflow: hidden;
 }
 
-section:nth-child(even) {
-  /* background-color: rgba(200, 200, 200, 0.4); */
-  background-color: #fcf0cc;
+article.omnie .omnie-txt {
+  padding-top: 2rem;
 }
 
-section:nth-child(odd) {
-  /* background-color: rgba(251, 251, 251, 0.2); */
-  /* background: linear-gradient(#fff, #abcbe4); */
-  background-color: #ead8ba;
+article.omnie p.effect {
+  margin: 1rem 2rem;
 }
 
-.active {
-  background-color: rgba(251, 251, 251, 0.3);
-  /* color: rgba(255, 255, 240, 0.9); */
-  /* background-color: #43a7fc; */
-  /* color: #def; */
-  transition: 1s;
-  pointer-events: none;
+article.omnie picture .gatsby-image-wrapper {
+  margin: 2rem 0;
+  padding: 2rem 0;
 }
 
-a:active {
-  color: #bdf;
+/* SECTION FOUR standard */
+
+#kontakt {
+  background: left top url("../images/gong2.png") no-repeat #fcf0cc;
+  flex-direction: column-reverse;
 }
 
-nav {
-  position: relative;
-  /* border-bottom: 1px solid #00f; */
+#kontakt h2 {
+  font-size: 4rem;
+  margin: 1rem;
+  text-align: right;
+  background-color: #fff;
 }
 
-nav::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  height: 8px;
-  background: linear-gradient(#614, transparent);
+article.kontakt ul {
+  background-color: rgba(250, 250, 250, 0.8);
+  padding: 2rem 0.2rem;
+  border: 1px solid #aa9;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px #554;
 }
 
-/* FORM */
+article.kontakt ul li {
+  font-size: 1.2rem;
+  color: #331;
+}
+
+/* FORM standard */
 
 .form {
   max-width: 30rem;
@@ -159,14 +172,13 @@ nav::after {
   border: 1px solid #aa9;
   border-radius: 5px;
   box-shadow: 2px 2px 3px #554;
-  margin: 2rem;
-  padding: 1rem;
 }
 
 .form input,
 .form textarea {
   margin: 0.5rem 0 1rem 0;
-  width: 30rem;
+  width: 90%;
+  max-width: 30rem;
   line-height: 1.3rem;
   padding: 0.2rem;
   border: 1px solid rgba(51, 51, 51, 0.3);
@@ -187,7 +199,7 @@ nav::after {
 .form .btn {
   width: 10rem;
   padding: 0.5rem;
-  margin-right: 2rem;
+  margin: 1rem;
   border: 1px solid #aa9;
   cursor: pointer;
 }
@@ -196,153 +208,188 @@ nav::after {
   box-shadow: 2px 2px 3px rgba(51, 51, 51, 0.7);
 }
 
-/* SECTION ONE */
+@media (min-width: 800px) {
+  nav ul {
+    display: flex;
+  }
 
-#gongi {
-  background: right bottom url("../images/gong3.png") no-repeat #ead8ba;
+  nav ul li {
+    flex: 1;
+  }
+
+  nav a {
+    text-align: center;
+    font-size: 2rem;
+    padding-left: 0;
+    line-height: var(--header-height-big);
+  }
+
+  section {
+    scroll-margin-top: var(--header-height-big);
+    height: 100%;
+    min-height: 100vh;
+  }
+
+  /* SECTION ONE big */
+
+  #gongi {
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  #gongi::after {
+    content: "gongi";
+    position: absolute;
+    display: inline-block;
+    top: -3rem;
+    right: 0;
+    font-size: 25rem;
+    color: rgba(51, 51, 51, 0.1);
+    font-weight: bold;
+    overflow: hidden;
+  }
+
+  #gongi h2 {
+    font-size: 10rem;
+    margin: -1rem 0 2rem 4rem;
+  }
+
+  #gongi .video {
+    margin: 3rem;
+  }
+
+  /* SECTION TWO big */
+
+  #usluga {
+    flex-direction: row;
+  }
+
+  article.usluga {
+    flex: 1;
+    padding: 0;
+  }
+
+  article.usluga h2 {
+    font-size: 4rem;
+  }
+
+  article.usluga p {
+    margin: 1rem;
+  }
+
+  /* SECTION THREE big */
+
+  #omnie {
+    flex-direction: row;
+  }
+
+  #omnie h2 {
+    font-size: 6rem;
+  }
+
+  /* SECTION FOUR big */
+
+  #kontakt {
+    flex-direction: row;
+  }
+
+  #kontakt h2 {
+    font-size: 6rem;
+    margin: 2rem;
+    text-align: right;
+    background-color: transparent;
+  }
+
+  article.kontakt {
+    flex: 1;
+  }
+
+  article.kontakt ul {
+    margin: 11rem 1rem 0 5rem;
+  }
+
+  article.kontakt ul li {
+    font-size: 2rem;
+  }
+
+  /* FORM big */
+
+  .form {
+    margin: 2rem;
+    padding: 1rem;
+  }
+
+  .form .btn {
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  #gongi .video {
+    margin: 14rem 0 0 8rem;
+    z-index: 1;
+  }
+
+  #gongi .video iframe {
+    width: 400px;
+  }
+}
+
+/* PRESENTATION */
+
+nav a {
+  margin: 0;
+  text-decoration: none;
+  font-size: 1.3rem;
+  user-select: none;
+}
+
+/* COLORS */
+
+header,
+footer {
+  background-color: #691145;
+}
+
+header a,
+footer a {
+  color: #fff;
+}
+
+h2 {
+  color: rgba(51, 51, 51, 0.7);
+}
+
+section:nth-child(even) {
+  /* background-color: rgba(200, 200, 200, 0.4); */
+  background-color: #fcf0cc;
+}
+
+section:nth-child(odd) {
+  /* background-color: rgba(251, 251, 251, 0.2); */
+  /* background: linear-gradient(#fff, #abcbe4); */
+  background-color: #ead8ba;
+}
+
+.active {
+  background-color: rgba(251, 251, 251, 0.3);
+  transition: 1s;
+  pointer-events: none;
+}
+
+a:active {
+  color: #bdf;
+}
+
+nav {
   position: relative;
-  font-size: 1rem;
-  display: flex;
-  /* overflow: hidden; */
 }
 
-#gongi::after {
-  content: "gongi";
+nav::after {
+  content: "";
   position: absolute;
-  top: -6rem;
-  right: -3rem;
-  font-size: 30rem;
-  color: rgba(51, 51, 51, 0.1);
-  font-weight: bold;
-}
-
-#gongi h2 {
-  font-size: 10rem;
-}
-
-#gongi p {
-  font-size: 1rem;
-}
-
-#gongi > article.gongi {
-  width: 30rem;
-  margin: 1rem;
-}
-
-article.gongi h2 {
-  margin-left: 4rem;
-  margin-bottom: 2rem;
-}
-
-article.gongi > section.gongi-txt {
-  margin-top: 4rem;
-}
-
-#gongi .video {
-  margin: 14rem 0 0 8rem;
-  z-index: 1;
-}
-
-#gongi .video iframe {
-  width: 400px;
-}
-
-/* SECTION TWO */
-
-#usluga {
-  display: flex;
-}
-
-article.usluga {
-  flex: 1;
-}
-
-article.usluga {
-  padding: 0;
-}
-
-article.usluga h2 {
-  font-size: 4rem;
-  margin: 1rem;
-}
-
-article.usluga p {
-  margin: 2rem;
-}
-
-article.usluga picture {
-  padding: 10px;
-  margin: 10px;
-  border: 1px solid #bb9;
-  display: inline-block;
-}
-
-article.usluga picture .gatsby-image-wrapper {
-  box-shadow: 3px 3px 2px #996;
-}
-
-/* SECTION THREE */
-
-#omnie {
-  display: flex;
-}
-
-#omnie h2 {
-  font-size: 6rem;
-  margin: 0.5rem 1rem;
-  text-align: right;
-  /* color: #663; */
-}
-
-article.omnie {
-  flex: 1;
-  overflow: hidden;
-}
-
-article.omnie .omnie-txt {
-  /* top: 2rem; */
-
-  padding-top: 2rem;
-}
-
-article.omnie p.effect {
-  margin: 1rem 2rem;
-  /* margin-top: 0; */
-}
-
-article.omnie picture .gatsby-image-wrapper {
-  margin: 2rem 0;
-  padding: 2rem 0;
-}
-
-/* SECTION FOUR */
-
-#kontakt {
-  background: left top url("../images/gong2.png") no-repeat #fcf0cc;
-  display: flex;
-}
-
-#kontakt h2 {
-  font-size: 6rem;
-  margin: 2rem;
-  text-align: right;
-  /* color: #663; */
-}
-
-article.kontakt {
-  flex: 1;
-}
-
-article.kontakt ul {
-  margin: 11rem 1rem 0 5rem;
-  background-color: rgba(250, 250, 250, 0.8);
-  padding: 2rem;
-  border: 1px solid #aa9;
-  border-radius: 5px;
-  box-shadow: 2px 2px 3px #554;
-}
-
-article.kontakt ul li {
-  font-size: 2rem;
-  color: #331;
+  top: 100%;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(#614, transparent);
 }

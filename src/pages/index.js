@@ -15,7 +15,7 @@ const themeAnimation = (dataAnimation, el, pfirst, omnietxt) => {
       gsap.fromTo(
         pfirst,
         { y: "+=35", opacity: 0.2 },
-        { y: 0, opacity: 0.9, duration: 2 }
+        { y: 0, opacity: 1, duration: 2 }
       );
       break;
     case "2":
@@ -140,7 +140,7 @@ const LandingPage = ({ data }) => {
             nobis ducimus voluptatibus ab.
           </p>
           <picture>
-            <Img fixed={data.zestaw.childImageSharp.fixed} />
+            <Img fluid={data.zestaw.childImageSharp.fluid} />
           </picture>
         </article>
       </section>
@@ -183,7 +183,7 @@ const LandingPage = ({ data }) => {
         <article className="omnie">
           <h2>O mnie</h2>
           <picture>
-            <Img fixed={data.terapia.childImageSharp.fixed} />
+            <Img fluid={data.terapia.childImageSharp.fluid} />
           </picture>
         </article>
       </section>
@@ -230,16 +230,16 @@ export const pageQuery = graphql`
     terapia: file(relativePath: { eq: "gong5.jpg" }) {
       id
       childImageSharp {
-        fixed(width: 600) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     zestaw: file(relativePath: { eq: "gong4.jpg" }) {
       id
       childImageSharp {
-        fixed(width: 450) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
