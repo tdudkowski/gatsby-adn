@@ -1,6 +1,6 @@
 :root {
   --header-height-small: 2rem;
-  --header-height-big: 4rem;
+  --header-height-big: 3rem;
 }
 * {
   /* box-sizing: border-box; */
@@ -105,25 +105,14 @@ section > p {
 
 /* SECTION TWO standard */
 
-#usluga {
+#dzwiekoterapia {
   display: flex;
   flex-direction: column-reverse;
 }
 
-article.usluga h2 {
+article.dzwiekoterapia h2 {
   font-size: 2rem;
   margin: 1rem;
-}
-
-article.usluga picture {
-  padding: 10px;
-  margin: 10px;
-  border: 1px solid #bb9;
-  display: block;
-}
-
-article.usluga picture .gatsby-image-wrapper {
-  box-shadow: 3px 3px 2px #996;
 }
 
 /* SECTION THREE standard */
@@ -138,16 +127,28 @@ article.usluga picture .gatsby-image-wrapper {
 
 article.omnie {
   flex: 1;
-  /* overflow: hidden; */
+}
+
+article.omnie picture {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #bb9;
+  display: block;
+}
+
+article.omnie picture .gatsby-image-wrapper {
+  box-shadow: 3px 3px 2px #996;
 }
 
 article.omnie .omnie-txt {
   padding-top: 2rem;
+  height: unset;
+  min-height: unset;
 }
 
 article.omnie picture .gatsby-image-wrapper {
-  margin: 2rem 0;
-  padding: 2rem 0;
+  margin: 1rem;
+  padding: 0.5rem;
 }
 
 /* SECTION FOUR standard */
@@ -291,25 +292,25 @@ article.kontakt ul li {
 
   /* SECTION TWO big */
 
-  #usluga {
+  #dzwiekoterapia {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  article.usluga {
+  article.dzwiekoterapia {
     flex: 1;
     padding: 0;
   }
 
-  article.usluga h2 {
+  article.dzwiekoterapia h2 {
     font-size: 4rem;
   }
 
-  article.usluga p {
+  article.dzwiekoterapia p {
     margin: 1rem;
   }
 
-  article.usluga iframe {
+  article.dzwiekoterapia iframe {
     width: 600px;
   }
 

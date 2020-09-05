@@ -137,8 +137,8 @@ const LandingPage = ({ data }) => {
           />
         </article>
       </section>
-      <section id="usluga" className="section" data-animation="2">
-        <article className="usluga">
+      <section id="dzwiekoterapia" className="section" data-animation="2">
+        <article className="dzwiekoterapia">
           <iframe
             src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FD%C5%BAwi%C4%99koterapia-relaksacje-z-u%C5%BCyciem-gong%C3%B3w-i-mis-tybeta%C5%84skich-420657995360697%2F&tabs=timeline&width=800&height=700&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
             width="600"
@@ -152,12 +152,8 @@ const LandingPage = ({ data }) => {
             allow="encrypted-media"
             title="facebook"
           ></iframe>
-
-          <picture>
-            <Img fluid={data.zestaw.childImageSharp.fluid} />
-          </picture>
         </article>
-        <article className="usluga">
+        <article className="dzwiekoterapia">
           <h2>Dźwiękoterapia</h2>
           <p className="effect">
             Uczestnicy podczas seansów zazwyczaj leżą. <br />
@@ -211,6 +207,9 @@ const LandingPage = ({ data }) => {
               <li>kurs masażem dźwiękiem mis.</li>
             </ul>
           </section>
+          <picture>
+            <Img fluid={data.zestaw.childImageSharp.fluid} />
+          </picture>
         </article>
         <article className="omnie">
           <h2>O mnie</h2>

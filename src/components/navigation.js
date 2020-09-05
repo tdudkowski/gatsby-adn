@@ -25,7 +25,7 @@ const smoothJump = (e) => {
 
 const elementsMenuArray = [
   ["gongi", "Gongi"],
-  ["usluga", "Usługa"],
+  ["dzwiekoterapia", "Dźwiękoterapia"],
   ["omnie", "O mnie"],
   ["kontakt", "Kontakt"],
 ];
