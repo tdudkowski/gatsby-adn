@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Agata Nowakowska`,
-    description: `gongi`,
-    author: `@tdudkowski`,
+    title: `Gongi Gram | Agata Nowakowska-Duk`,
+    description: `gongi tybetańskie, dźwiękoterapia, kąpiel w dźwiękach, koncert gongów tybetańskich`,
+    author: `@tdudkowski | http://dygresje.info`,
     siteUrl: `https://gatsby-ang.netlify.app`,
   },
   pathPrefix: "/gatsby-ang",
@@ -11,6 +11,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {

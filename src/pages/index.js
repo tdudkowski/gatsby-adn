@@ -178,7 +178,7 @@ const LandingPage = ({ data }) => {
               z Niepełnosprawnościami.
             </p>
             <p className="effect">
-              W pracy wykorzystuję techniki plastyczne, ruch, muzykę,a ale
+              W pracy wykorzystuję techniki plastyczne, ruch, muzykę, ale
               głównie grę na gongach jako seanse terapii dźwiękiem, indywidualne
               i grupowe, dla osób z umiarkowaną i głęboką niepełnosprawnością
               sprzężoną.
