@@ -60,16 +60,12 @@ function SEO({ description, lang, meta, title }) {
           content: `http://gongi-gram.pl/static/c4b6459cbff02630e5882687512d0b9d/4fe8c/gong4.jpg`,
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
           name: `twitter:creator`,
           content: site.siteMetadata.author,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
