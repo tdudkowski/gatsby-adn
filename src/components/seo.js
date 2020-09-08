@@ -35,6 +35,10 @@ function SEO({ description, lang, meta, title }) {
       }}
       meta={[
         {
+          name: `title`,
+          content: metaTitle,
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
@@ -52,7 +56,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:url`,
-          content: `http://gongi-gram.pl`,
+          content: `http://gongi-gram.pl/`,
         },
         {
           property: `og:image`,
@@ -60,7 +64,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:card`,
-          content: metaDescription,
+          content: `http://gongi-gram.pl/static/c4b6459cbff02630e5882687512d0b9d/4fe8c/gong4.jpg`,
         },
         {
           name: `twitter:creator`,
