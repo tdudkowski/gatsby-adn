@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Gongi Gram | Agata Nowakowska-Duk`,
-    description: `gongi tybetańskie, dźwiękoterapia, kąpiel w dźwiękach, koncert gongów tybetańskich`,
-    author: `@tdudkowski | http://dygresje.info`,
-    siteUrl: `https://gatsby-ang.netlify.app`,
+    description: `gongi tybetańskie we Wrocławiu, dźwiękoterapia, kąpiel w dźwiękach, koncert gongów tybetańskich`,
+    author: `Tadeusz Dudkowski | http://dygresje.info`,
+    siteUrl: `http://gongi-gram.pl/`,
   },
   pathPrefix: "/gatsby-ang",
   plugins: [

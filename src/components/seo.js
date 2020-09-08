@@ -33,11 +33,8 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
+      title={metaTitle}
       meta={[
-        {
-          name: `title`,
-          content: metaTitle,
-        },
         {
           name: `description`,
           content: metaDescription,
@@ -64,7 +61,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:card`,
-          content: `http://gongi-gram.pl/static/c4b6459cbff02630e5882687512d0b9d/4fe8c/gong4.jpg`,
+          content: `summary`,
         },
         {
           name: `twitter:creator`,
@@ -72,15 +69,19 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: metaTitle,
+          content: title,
         },
         {
           name: `twitter:description`,
           content: metaDescription,
         },
         {
-          property: `twitter:image`,
+          name: `twitter:image`,
           content: `http://gongi-gram.pl/static/c4b6459cbff02630e5882687512d0b9d/4fe8c/gong4.jpg`,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary_large_image`,
         },
       ].concat(meta)}
     />
