@@ -97,3 +97,12 @@ Z wykształcenia jestem m.in animatorem kultury i arteterapeutą, a pracuję w S
               Przejscie i przejscie,krzywizna inna sttopka; obrazek wystajacy na
               obie strony powiazany z sasiednia sekcja
             </p>
+
+## TODO
+
+- obrazek dociac stojak, margines z prawej
+- kontakt fb screen
+- SEO pozycjonowanie gongi, relaksacja relaks Wrocław, ADHD, terapia, dźwiękoterapia, muzykoterapia
+
+- formularz uładnić
+- animacje

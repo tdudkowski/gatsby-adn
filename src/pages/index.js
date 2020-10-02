@@ -22,28 +22,28 @@ const themeAnimation = (dataAnimation, el, pfirst, omnietxt) => {
       break;
     case "2":
       console.log("ELO2");
-      gsap.fromTo(
-        el,
-        { x: "+=1", opacity: 0.4 },
-        {
-          x: 0,
-          opacity: 1,
-          duration: 2,
-          scrollTrigger: {
-            trigger: el,
-            start: "top bottom",
-            scrub: true,
-          },
-        }
-      );
+      // gsap.fromTo(
+      //   el,
+      //   { x: "+=1", opacity: 0.4 },
+      //   {
+      //     x: 0,
+      //     opacity: 1,
+      //     duration: 2,
+      //     scrollTrigger: {
+      //       trigger: el,
+      //       start: "top bottom",
+      //       scrub: true,
+      //     },
+      //   }
+      // );
       break;
     case "3":
       // console.log("ELO3");
       gsap.fromTo(
         omnietxt,
-        { x: "-=200", opacity: 0.1 },
+        { y: "+=20", opacity: 0.1 },
         {
-          x: 0,
+          y: 0,
           opacity: 1,
           duration: 3,
           scrollTrigger: {
@@ -95,14 +95,14 @@ const LandingPage = ({ data }) => {
             </p>
             <p className="effect">
               Nasz zmysł słuchu odbiera jako dźwięk wibracje w paśmie od 16 do
-              20 000 Hz. Gongi mają o wiele większe spektrum wibracji, Woda, z
+              20 000 Hz. Gongi mają o wiele większe spektrum wibracji. Woda, z
               której człowiek się składa w 70%, jest znakomitym nośnikiem
-              wibracji, dlatego odbieramy dźwięki również przez całe ciało,
-              ulegając ich wpływowi.
+              wibracji, dlatego odbieramy dźwięki również całym ciałem, ulegając
+              ich wpływowi.
             </p>
             <p className="effect">
               Zmysł słuchu wytwarza się w fazie embrionalnej jako pierwszy i
-              najdłużej działa. Podobnie jak zmysł węchu jest ścisłe związany z
+              najdłużej działa. Podobnie jak zmysł węchu, jest ścisle związany z
               emocjami. Człowiek nie tylko słucha dźwięku, ale odbiera wibracje
               fal akustycznych. Drgania wewnątrz organizmu przenoszone przez
               płyny ustrojowe stymulują komórki w naszym organizmie, działając
@@ -115,9 +115,16 @@ const LandingPage = ({ data }) => {
               seansów mózg w trakcie głębokiego rozluźnienia przechodzi w tryb
               fal alfa, a nawet theta, usuwając nagromadzone w ciele napięcia i
               blokady. Jest to skuteczna technika pokonywania stresu i
-              zapobiegania jego negatywnym skutkom Może to być też początek
-              pogłębienia samoświadomości, zwolnienia tempa życia i bardziej
-              uważnego funkcjonowania.
+              zapobiegania jego negatywnym skutkom. Niwelując stres uruchamiamy
+              procesy samoleczenia. Może to być też początek pogłębienia
+              samoświadomości, zwolnienia tempa życia i bardziej uważnego
+              funkcjonowania.
+            </p>
+            <p className="effect">
+              W przypadku terapii dla dzieci relaksacje stosuje się w terapii
+              mowy i myślenia, w trudnościach z koncentracją, w nadpobudliwości
+              - ADHD, co pozytywnie przekłada się na wyciszenie, a co za tym
+              idzie poprawę funkcjonowania w codzienności oraz poprawę w nauce.
             </p>
             <p className="effect">
               We współczesnej medycynie używa się ultradźwięków (dźwięki
@@ -188,23 +195,25 @@ const LandingPage = ({ data }) => {
             </p>
             <p className="effect">
               Gongami zainteresowałam się po tym jak sama doświadczyłam ich
-              dobroczynnego wpływu na siebie. Będąc pod wrażeniem jak mocno
-              gongi oddziałują na organizm, działając wyciszająco, poruszając
-              wyobraźnię, oraz jako spektakl dźwiękowy oddziaływający na wiele
-              sposobów. Świadomość że można za ich pomocą pomagać innym
-              zainspirowała mnie do nauki gry na tych instrumentach. Ukończyłam
-              trzy kursy:
+              dobroczynnego wpływu. Gongi oddziałują na organizm wyciszająco,
+              poruszają wyobraźnię, usuwają blokady, otwierają. Świadomość że
+              można za ich pomocą pomagać innym zainspirowała mnie do nauki gry
+              na tych instrumentach. Ukończyłam trzy kursy:
             </p>
             <ul>
               <li>
-                gry na gongach (szkolenie w zakresie wykorzystania gongów w
-                kąpielach dźwiękowych, medytacji i koncercie)
+                Gry na gongach (szkolenie w zakresie wykorzystania gongów w
+                kąpielach dźwiękowych, medytacji i koncercie). Prowadzący:
+                Ryszard Zdzioch.
               </li>
               <li>
-                muzykoterapii organicznej (Gongi i instrumenty archaiczne w
-                terapii i profilaktyce)
+                Muzykoterapii organicznej (Gongi i instrumenty archaiczne w
+                terapii i profilaktyce). Prowadzący: Tomasz Niewiadomy.
               </li>
-              <li>kurs masażem dźwiękiem mis.</li>
+              <li>
+                Kurs masażu dźwiękiem mis (wg metody Petera Hessa). Prowadzący:
+                Ryszard Zdzioch.
+              </li>
             </ul>
           </section>
           <picture>
@@ -223,10 +232,10 @@ const LandingPage = ({ data }) => {
           <ul>
             <li>telefon: 519 714 793</li>
             <li>mail: agata.gongi@gmail.com</li>
-            <li>
-              Facebook:{" "}
+            <li class="fb-link">
+              Facebook:&nbsp;{" "}
               <a href="https://www.facebook.com/Dźwiękoterapia-relaksacje-z-użyciem-gongów-i-mis-tybetańskich-420657995360697/">
-                Dźwiękoterapia - relaksacje z użyciem gongów i mis tybetańskich
+                <span>Link do Facebooka</span>
               </a>{" "}
             </li>
           </ul>
@@ -249,34 +258,29 @@ const LandingPage = ({ data }) => {
               aria-label="hidden field"
             />
             <label htmlFor="name" aria-label="name">
-              Nadawca: <br />
-              <input type="text" id="name" name="name"></input>
-              <br />
+              Nadawca:{" "}
             </label>
+            <input type="text" id="name" name="name"></input>
 
-            <label htmlFor="email">
-              Email: <br />
-              <input
-                type="email"
-                // id="email"
-                name="_replyto"
-                id="_replyto"
-                aria-label="email"
-              />
-              <br />
-            </label>
-            <label htmlFor="message">
-              Wiadomość: <br />
-              <textarea
-                name="message"
-                id="message"
-                rows="10"
-                cols="30"
-                aria-label="text here"
-                required
-              />
-              <br />
-            </label>
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              // id="email"
+              name="_replyto"
+              id="_replyto"
+              aria-label="email"
+            />
+
+            <label htmlFor="message">Wiadomość:</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="10"
+              cols="30"
+              aria-label="text here"
+              required
+            />
+
             <button type="submit" className="btn">
               Wyślij
             </button>
@@ -322,6 +326,14 @@ export const pageQuery = graphql`
       }
     }
     kapiel: file(relativePath: { eq: "gong8.jpg" }) {
+      id
+      childImageSharp {
+        fixed(width: 424) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    fb: file(relativePath: { eq: "fb-gong.jpg" }) {
       id
       childImageSharp {
         fixed(width: 424) {
