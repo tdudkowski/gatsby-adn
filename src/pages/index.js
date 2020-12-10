@@ -109,31 +109,6 @@ const LandingPage = ({ data }) => {
               niczym masaż. Wibracja wytwarzana przez gongi powoduje silne
               drgania i odczuwana jest fizycznie.
             </p>
-            <p className="effect">
-              Terapia dźwiękowa wpływa bezpośrednio na zharmonizowanie całego
-              organizmu na poziomach fizycznym i emocjonalnym. Podczas takich
-              seansów mózg w trakcie głębokiego rozluźnienia przechodzi w tryb
-              fal alfa, a nawet theta, usuwając nagromadzone w ciele napięcia i
-              blokady. Jest to skuteczna technika pokonywania stresu i
-              zapobiegania jego negatywnym skutkom. Niwelując stres uruchamiamy
-              procesy samoleczenia. Może to być też początek pogłębienia
-              samoświadomości, zwolnienia tempa życia i bardziej uważnego
-              funkcjonowania.
-            </p>
-            <p className="effect">
-              W przypadku terapii dla dzieci relaksacje stosuje się w terapii
-              mowy i myślenia, w trudnościach z koncentracją, w nadpobudliwości
-              - ADHD, co pozytywnie przekłada się na wyciszenie, a co za tym
-              idzie poprawę funkcjonowania w codzienności oraz poprawę w nauce.
-            </p>
-            <p className="effect">
-              We współczesnej medycynie używa się ultradźwięków (dźwięki
-              niesłyszalne), np. USG i leczeniu urazów. W Niemczech terapia
-              dźwiękiem za pomocą gongów i mis dźwiękowych jest stosowana jako
-              wsparcie medycyny konwencjonalnej, przepisywana przez lekarzy
-              pierwszego kontaktu.
-            </p>
-            <p className="effect">Dźwięk przenika wszystko.</p>
           </section>
         </article>
         <article className="gongi">
@@ -163,18 +138,52 @@ const LandingPage = ({ data }) => {
         <article className="dzwiekoterapia">
           <h2>Dźwiękoterapia</h2>
           <p className="effect">
-            Uczestnicy podczas seansów zazwyczaj leżą. <br />
+            Terapia dźwiękowa wpływa bezpośrednio na zharmonizowanie całego
+            organizmu na poziomach fizycznym i emocjonalnym. Podczas takich
+            seansów mózg w trakcie głębokiego rozluźnienia przechodzi w tryb
+            fal alfa, a nawet theta, usuwając nagromadzone w ciele napięcia i
+            blokady. Jest to skuteczna technika pokonywania stresu i
+            zapobiegania jego negatywnym skutkom. Niwelując stres uruchamiamy
+            procesy samoleczenia. Może to być też początek pogłębienia
+            samoświadomości, zwolnienia tempa życia i bardziej uważnego
+            funkcjonowania.
+            </p>
+          <p className="effect">
+            W przypadku terapii dla dzieci relaksacje stosuje się w terapii
+            mowy i myślenia, w trudnościach z koncentracją, w nadpobudliwości
+            - ADHD, co pozytywnie przekłada się na wyciszenie, a co za tym
+            idzie poprawę funkcjonowania w codzienności oraz poprawę w nauce.
+            </p>
+          <p className="effect">
+            We współczesnej medycynie używa się ultradźwięków (dźwięki
+            niesłyszalne), np. USG i leczeniu urazów. W Niemczech terapia
+            dźwiękiem za pomocą gongów i mis dźwiękowych jest stosowana jako
+            wsparcie medycyny konwencjonalnej, przepisywana przez lekarzy
+            pierwszego kontaktu.
+            </p>
+          <p className="effect">Dźwięk przenika wszystko.</p>
+        </article>
+      </section>
+      <section id="usluga" className="section">
+        <article className="usluga">
+          <h2>Usługa</h2>
+          <p className="effect">
+            Uczestnicy podczas seansów zazwyczaj leżą.<br />
             Dysponuję własnym samochodem i mogę dojechać do klienta.
             <br />
             Zapraszam do śledzenia wydarzeń na Facebooku oraz do kontaktu.
           </p>
-          <hr />
           <h3>Kąpiele w dźwiękach gongów</h3>
-          <p className="effect">Grupowe i indywidualne, około godziny.</p>
+          <p className="effect">Grupowe i indywidualne, czas trwania około godziny.</p>
           <Img fixed={data.kapiel.childImageSharp.fixed} />
+
+        </article>
+        <article className="usluga">
+
           <h3>Masaż dźwiękiem mis</h3>
-          <p className="effect">45 minut.</p>
+          <p className="effect">Czas trwania około 45 minut.</p>
           <Img fixed={data.masaz.childImageSharp.fixed} />
+
         </article>
       </section>
       <section id="omnie" className="section" data-animation="3">

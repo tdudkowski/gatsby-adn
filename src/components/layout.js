@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "./navigation";
+import Hamburger from "./hamburger"
 import "./layout.css";
 import SEO from "./seo";
 
@@ -8,7 +9,7 @@ const Layout = ({ children }) => {
     <div className="container">
       <SEO />
       <header>
-        <Navigation />
+        <Hamburger />
       </header>
       <main className="main">{children}</main>
       <footer>

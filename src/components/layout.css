@@ -150,6 +150,12 @@ article.omnie picture .gatsby-image-wrapper {
   padding: 0.5rem;
 }
 
+/* SECTION USLUGI standard */
+
+section#usluga {background-color: rgb(234, 216, 186); }
+
+.gatsby-image-wrapper {max-width:90%;}
+
 /* SECTION FOUR standard */
 
 #kontakt {
@@ -333,6 +339,14 @@ section:nth-child(odd) {
   #omnie h2 {
     font-size: 6rem;
   }
+
+  /* SECTION USLUGA big */
+
+  section#usluga {flex-direction: row}
+
+  section#usluga > article {flex:1;}
+  article.usluga h2 {font-size:4rem;}
+
 
   /* SECTION FOUR big */
 
