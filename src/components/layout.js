@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import "./layout.css";
 import Navigation from "./navigation"
 import Hamburger from "./hamburger"
@@ -7,13 +7,17 @@ import Seo from "./seo";
 import Helmet from 'react-helmet'
 
 const Layout = ({ children }) => {
-    const firstSection = document.getElementById("gongi")
-    const secondSection = document.getElementById("dzwiekoterapia")
+
     const setDefaultCSS = () => {
-        if (firstSection) {
-            firstSection.style.position = "sticky"
-            secondSection.style.position = "sticky"
-        }
+        useEffect(() => {
+            const firstSection = document.getElementById("gongi")
+            const secondSection = document.getElementById("dzwiekoterapia")
+            if (firstSection) {
+                firstSection.style.position = "sticky"
+                secondSection.style.position = "sticky"
+            }
+        }, []);
+
     }
     return (
         <div className="container">

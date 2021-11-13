@@ -1,16 +1,16 @@
-import React from "react"
+import React, { useEffect } from "react";
 import "./layout.css";
 
 const Navigation = () => {
 
-    const sections = document.querySelectorAll("section");
     // const firstSection = document.getElementById("gongi")
     // const secondSection = document.getElementById("dzwiekoterapia")
     // const thirdSection = document.getElementById("usluga")
 
-    if (sections) {
+    useEffect(() => {
+        const sections = document.querySelectorAll("section");
         for (let j = 0; j < sections.length; j++) { sections[j].style.position = "relative"; }
-    }
+    }, []);
 
     const smoothJump = (e) => {
 
