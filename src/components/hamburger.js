@@ -1,8 +1,10 @@
 // src https://snopkowski.com/blog/gatsby-navigation-styled-components
 import React, { useState } from "react"
-import NavbarLinks from "./navigation"
+// import NavbarLinks from "./navigation"
 // import Logo from "./Logo"
 import styled from "styled-components"
+import loadable from "@loadable/component";
+const NavbarLinks = loadable(() => import("./navigation"));
 
 const Navigation = styled.nav`
       

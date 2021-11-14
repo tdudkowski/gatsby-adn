@@ -1,8 +1,10 @@
 import React from 'react';
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import Layout from '../components/layout';
+// import Layout from '../components/layout';
 import Video from "../components/video";
+import loadable from "@loadable/component";
+const Layout = loadable(() => import("../components/layout"));
 
 const LandingIndexPage = ({ data }) => {
     return (
