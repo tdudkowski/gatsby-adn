@@ -30,7 +30,7 @@ const LandingIndexPage = ({ data }) => {
 
             <section className="dzwiekoterapia" id="dzwiekoterapia">
                 <div><h2>Dźwiękoterapia</h2>
-                    <p>Terapia dźwiękowa wpływa bezpośrednio na zharmonizowanie całego organizmu na poziomach fizycznym i emocjonalnym. Podczas takich seansów mózg w trakcie głębokiego rozluźnienia przechodzi w tryb fal alfa, a nawet theta, usuwając nagromadzone w ciele napięcia i blokady. Jest to skuteczna technika pokonywania stresu i zapobiegania jego negatywnym skutkom. Niwelując stres uruchamiamy procesy samoleczenia. Może to być też początek pogłębienia samoświadomości, zwolnienia tempa życia i bardziej uważnego funkcjonowania.</p>
+                    <p>Terapia dźwiękowa wpływa bezpośrednio na cały organizmu na poziomach fizycznym i emocjonalnym. Podczas takich seansów mózg w trakcie głębokiego rozluźnienia przechodzi w tryb fal alfa, a nawet theta, usuwając nagromadzone w ciele napięcia i blokady. Jest to skuteczna technika pokonywania stresu i zapobiegania jego negatywnym skutkom. Niwelując stres uruchamiamy procesy samoleczenia. Może to być też początek pogłębienia samoświadomości, zwolnienia tempa życia i bardziej uważnego funkcjonowania.</p>
 
                     <p>W przypadku terapii dla dzieci relaksacje stosuje się w terapii mowy i myślenia, w trudnościach z koncentracją, w nadpobudliwości - ADHD, co pozytywnie przekłada się na wyciszenie, a co za tym idzie poprawę funkcjonowania w codzienności oraz poprawę w nauce.</p>
 
