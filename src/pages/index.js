@@ -111,10 +111,8 @@ const LandingIndexPage = ({ data }) => {
                 </div>
                 <div>
                     <form
-                        action=""
                         className="form"
                         name="contactgongi"
-                        id="contactgongi"
                         method="POST"
                         data-netlify="true"
                         netlify-honeypot="bot-field">
@@ -144,9 +142,7 @@ const LandingIndexPage = ({ data }) => {
                             required
                         />
 
-                        <button type="submit" className="btn">
-                            Wyślij
-                        </button>
+                        <button type="submit" className="btn">Wyślij wiadomość</button>
                         <input
                             type="reset"
                             value="Wyczyść formularz"
