@@ -113,13 +113,13 @@ const LandingIndexPage = ({ data }) => {
                     <form
                         action=""
                         className="form"
-                        name="contact"
-                        id="contact"
+                        name="contactgongi"
+                        id="contactgongi"
                         method="POST"
                         data-netlify="true"
                         netlify-honeypot="bot-field">
                         <input type="hidden" name="bot-field" aria-label="hidden field" />
-                        <input type="hidden" name="form-name" value="contact" aria-label="hidden field" />
+                        <input type="hidden" name="form-name" value="contactgongi" aria-label="hidden field" />
                         <label htmlFor="name" aria-label="name">
                             Nadawca:{" "}
                         </label>
