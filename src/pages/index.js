@@ -132,7 +132,7 @@ const LandingIndexPage = ({ data }) => {
                             aria-label="email"
                         />
 
-                        <label htmlFor="message">Wiadomość:</label>
+                        <label htmlFor="message">Wiadomosc:</label>
                         <textarea
                             name="message"
                             id="message"
@@ -142,10 +142,10 @@ const LandingIndexPage = ({ data }) => {
                             required
                         />
 
-                        <button type="submit" className="btn">Wyślij wiadomość</button>
+                        <button type="submit" className="btn">Wyslij</button>
                         <input
                             type="reset"
-                            value="Wyczyść formularz"
+                            value="Wyczysc formularz"
                             className="btn"
                             aria-label="clear button"
                         />
